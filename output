@@ -1,0 +1,73 @@
+✅ emotion_dataset.csv created successfully with 300 rows
+                                   text emotion
+0          Everything is under control.    calm
+1            I feel so lonely and down.     sad
+2            I miss my friends so much.     sad
+3             I’m enjoying the silence.    calm
+4                My mind feels at ease.    calm
+5               I am furious right now!   angry
+6        They really made me mad today.   angry
+7  Nothing seems to make sense anymore.     sad
+8       I feel so frustrated right now.   angry
+9  Why can’t people just be respectful?   angry
+                           text emotion
+0  Everything is under control.    calm
+1    I feel so lonely and down.     sad
+2    I miss my friends so much.     sad
+3     I’m enjoying the silence.    calm
+4        My mind feels at ease.    calm
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /root/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+/usr/local/lib/python3.12/dist-packages/keras/src/layers/core/embedding.py:97: UserWarning: Argument `input_length` is deprecated. Just remove it.
+  warnings.warn(
+Model: "sequential_5"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ embedding_5 (Embedding)         │ ?                      │   0 (unbuilt) │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ lstm_5 (LSTM)                   │ ?                      │   0 (unbuilt) │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_10 (Dropout)            │ ?                      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_10 (Dense)                │ ?                      │   0 (unbuilt) │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_11 (Dropout)            │ ?                      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_11 (Dense)                │ ?                      │   0 (unbuilt) │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 0 (0.00 B)
+ Trainable params: 0 (0.00 B)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 4s 132ms/step - accuracy: 0.1666 - loss: 1.7933 - val_accuracy: 0.2000 - val_loss: 1.7945
+Epoch 2/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 87ms/step - accuracy: 0.1979 - loss: 1.7905 - val_accuracy: 0.1667 - val_loss: 1.7953
+Epoch 3/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 84ms/step - accuracy: 0.1669 - loss: 1.7949 - val_accuracy: 0.0833 - val_loss: 1.8024
+Epoch 4/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 81ms/step - accuracy: 0.1969 - loss: 1.7929 - val_accuracy: 0.0833 - val_loss: 1.8029
+Epoch 5/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 87ms/step - accuracy: 0.2133 - loss: 1.7873 - val_accuracy: 0.0833 - val_loss: 1.8050
+Epoch 6/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 80ms/step - accuracy: 0.2070 - loss: 1.7940 - val_accuracy: 0.0833 - val_loss: 1.8020
+Epoch 7/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 80ms/step - accuracy: 0.1494 - loss: 1.7972 - val_accuracy: 0.1667 - val_loss: 1.7970
+Epoch 8/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 85ms/step - accuracy: 0.1291 - loss: 1.7918 - val_accuracy: 0.0833 - val_loss: 1.8008
+Epoch 9/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 81ms/step - accuracy: 0.1826 - loss: 1.7911 - val_accuracy: 0.0833 - val_loss: 1.7982
+Epoch 10/10
+8/8 ━━━━━━━━━━━━━━━━━━━━ 1s 82ms/step - accuracy: 0.1355 - loss: 1.7961 - val_accuracy: 0.0833 - val_loss: 1.8019
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 55ms/step - accuracy: 0.0868 - loss: 1.8027
+Test Accuracy: 0.08
+
+WARNING:tensorflow:6 out of the last 11 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7dcb987c2c00> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 231ms/step
+happy
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step
+happy
